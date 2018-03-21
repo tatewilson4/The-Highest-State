@@ -2,19 +2,26 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
-// const seed = require('./models/seed.js');
 const session = require('express-session');
-const eventsController = require('./controllers/events.js');
+const bcrypt = require('bcrypt');
+const User = require('./models/users.js');
+
 
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+
+
+const eventsController = require('./controllers/events.js');
 app.use('/events', eventsController);
+
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
 
 // app.use(express.static('public'));
 app.use(session({
-  secret: "feedmeseymour", //some random string
+  secret: "feedmeseymour",
   resave: false,
   saveUninitialized: false
 }));
