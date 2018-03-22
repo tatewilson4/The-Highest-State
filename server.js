@@ -30,7 +30,7 @@ app.use(session({
 }));
 
 
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/events'
+const mongoURI = process.env.PORT || 'mongodb://localhost:27017/events'
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', () => {
     console.log('connected to mongo');
