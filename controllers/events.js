@@ -3,6 +3,7 @@ const router = express.Router();
 const Event = require('../models/events.js');
 const User = require('../models/users.js');
 
+
 router.get('/' , (req, res) => {
   Event.find({}, (err, allEvents) => {
     res.render('index.ejs' , {
