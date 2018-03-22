@@ -11,8 +11,7 @@ router.post('/' , (req, res) => {
   User.findOne({
     name: req.body.name
   }, (err, foundUser) => {
-    if(bcrypt.compareSync(req.body.password, foundUser.password))
-  {
+    if(bcrypt.compareSync(req.body.password, foundUser.password)){
   req.session.currentUser = foundUser;
   res.redirect('/events');
   } else {
