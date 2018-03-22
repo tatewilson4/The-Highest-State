@@ -16,12 +16,12 @@ router.post('/' , (req, res) => {
   res.redirect('/events');
   } else {
     res.send('wrong password')
-    };
+    }
   });
 });
 
 router.delete('/' , (req, res) => {
-  res.session.destroy(() => {
+  res.sessions.destroy(() => {
     res.redirect('/events');
   });
 });

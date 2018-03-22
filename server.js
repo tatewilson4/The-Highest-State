@@ -9,6 +9,11 @@ const Event = require('./models/events.js');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(session({
+  secret: "feedmeseymour",
+  resave: false,
+  saveUninitialized: false
+}));
 app.use(methodOverride('_method'));
 
 
@@ -22,13 +27,13 @@ const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
 // app.use(express.static('public'));
-app.use(session({
-  secret: "feedmeseymour",
-  resave: false,
-  saveUninitialized: false
-}));
 
 
+app.get('/' , (req, res) => {
+  res.render('index.ejs' , {
+    currentUser: req.session.currentUser
+  });
+});
 
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/events'

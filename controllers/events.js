@@ -13,6 +13,14 @@ router.get('/' , (req, res) => {
   });
 });
 
+router.get('/' , (req, res) => {
+  User.find({}, (err, foundUsers) => {
+    res.render('seasons/index.ejs' , {
+      users: foundUsers
+    });
+  });
+});
+
 router.get('/new' , (req, res) => {
   res.render('seasons/new.ejs')
 });
