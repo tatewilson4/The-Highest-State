@@ -28,15 +28,15 @@ app.use(session({
   saveUninitialized: false
 }));
 
-app.get('/events/seedEvents', (req, res) => {
-
-  Events.create(seed, (err, createdEvents) => {
-    // logs created users
-    console.log(createdEvents);
-    // redirects to index
-    res.redirect('/events');
-  });
-});
+// app.get('/events/seedEvents', (req, res) => {
+//
+//   Events.create(seed, (err, createdEvents) => {
+//     // logs created users
+//     console.log(createdEvents);
+//     // redirects to index
+//     res.redirect('/events');
+//   });
+// });
 
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/events'

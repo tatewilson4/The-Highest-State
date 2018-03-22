@@ -1,4 +1,4 @@
-let seedEvents = [
+let eventSeed = [
   {
     title: "Mount Elbert: 14,433 feet - Class 2",
     img: "https://gearjunkie.com/legacy/images/19992.jpg",
@@ -97,4 +97,4 @@ let seedEvents = [
   }
 ]
 
-module.exports = seedEvents;
+module.exports = eventSeed;
