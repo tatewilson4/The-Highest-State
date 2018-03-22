@@ -7,14 +7,14 @@ const User = require('../models/users.js');
 
 router.get('/' , (req, res) => {
   Event.find({}, (err, allEvents) => {
-    res.render('index.ejs' , {
+    res.render('seasons/index.ejs' , {
       events: allEvents
     });
   });
 });
 
 router.get('/new' , (req, res) => {
-  res.render('new.ejs')
+  res.render('seasons/new.ejs')
 });
 
 
@@ -26,7 +26,7 @@ router.post('/' , (req, res) => {
 
 router.get('/:id' , (req,res) => {
   Event.findById(req.params.id, (err, foundEvent) => {
-    res.render('show.ejs' , {
+    res.render('seasons/show.ejs' , {
       event: foundEvent
     });
   });
@@ -35,7 +35,7 @@ router.get('/:id' , (req,res) => {
 router.get('/:id/edit' , (req, res) => {
   Event.findById(req.params.id, (err, foundEvent) => {
     res.render(
-      'edit.ejs',
+      'seasons/edit.ejs',
       {event: foundEvent}
     );
   });
