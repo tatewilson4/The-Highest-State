@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
-const User = require('./models/users.js');
+
 
 
 
@@ -18,6 +18,9 @@ app.use('/events', eventsController);
 
 const usersController = require('./controllers/users.js');
 app.use('/users', usersController);
+
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
 // app.use(express.static('public'));
 app.use(session({

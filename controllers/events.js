@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Event = require('../models/events.js');
+const User = require('../models/users.js');
 
 router.get('/' , (req, res) => {
   Event.find({}, (err, allEvents) => {
@@ -14,15 +15,6 @@ router.get('/new' , (req, res) => {
   res.render('new.ejs')
 });
 
-// router.get('/events/seedEvents', (req, res) => {
-//
-//   Event.create(seed, (err, createdEvents) => {
-//     // logs created users
-//     console.log(createdEvents);
-//     // redirects to index
-//     res.redirect('/events');
-//   });
-// });
 
 router.post('/' , (req, res) => {
   Event.create(req.body, (err, createdEvent) => {
