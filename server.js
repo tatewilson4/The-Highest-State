@@ -30,12 +30,13 @@ app.use(session({
 }));
 
 
-
-app.listen(3000, () => {
-  console.log('listening');
-});
-
-mongoose.connect('mongodb://localhost:27017/events');
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/events'
+mongoose.connect(mongoURI);
 mongoose.connection.once('open', () => {
     console.log('connected to mongo');
+});
+
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  console.log('listening');
 });
