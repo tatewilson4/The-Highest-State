@@ -3,6 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDQnl5YWy3r4Zh83G8cTEzItLIRdMVr0oo" type="text/javascript">
+    </script>
+    <script>
+function initialize() {
+  var mapProp = {
+    <% if(event4.title === "Red Rocks Amphitheatre"){ %>
+    center:new google.maps.LatLng(39.6654, -105.2057)
+    <% } else if(event4.title === "Coors Field") { %>
+    center:new google.maps.LatLng(39.7392, -104.9903)
+    <% } else if (event4.title === "Hanging Lake") { %>
+    center:new google.maps.LatLng(39.6014, -107.1918)
+    <% } else if (event4.title === "Pikes Peak") { %>
+    center:new google.maps.LatLng(38.8409, -105.0423) <% } %>,
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
   </head>
   <body>
     <h1>Show Page</h1>
@@ -10,6 +31,7 @@
     <img src="<%=event4.img; %>"><br/>
     Description: <%=event4.description; %><br/>
     Rating: <%=event4.rating; %><br/>
+    <div id="googleMap" style="width:500px;height:380px;"></div>
     <nav>
       <a href="/events4">Back to Events Index</a>
     </nav>

@@ -3,6 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDQnl5YWy3r4Zh83G8cTEzItLIRdMVr0oo" type="text/javascript">
+    </script>
+    <script>
+function initialize() {
+  var mapProp = {
+    <% if(event3.title === "Gem Lake"){ %>
+    center:new google.maps.LatLng(40.4109, -105.5034)
+    <% } else if(event3.title === "Mayflower Gulch") { %>
+    center:new google.maps.LatLng(38.5642, -105.8461)
+    <% } else if (event3.title === "Bighorn Creek") { %>
+    center:new google.maps.LatLng(40.4005, -105.5875)
+    <% } else if (event3.title === "Royal Gorge") { %>
+    center:new google.maps.LatLng(38.4632, -105.3228) <% } %>,
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
   </head>
   <body>
     <h1>Show Page</h1>
@@ -10,6 +31,7 @@
     <img src="<%=event3.img; %>"><br/>
     Description: <%=event3.description; %><br/>
     Rating: <%=event3.rating; %><br/>
+    <div id="googleMap" style="width:500px;height:380px;"></div>
     <nav>
       <a href="/events3">Back to Events Index</a>
     </nav>

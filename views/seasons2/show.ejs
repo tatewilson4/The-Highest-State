@@ -3,6 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDQnl5YWy3r4Zh83G8cTEzItLIRdMVr0oo" type="text/javascript">
+    </script>
+    <script>
+function initialize() {
+  var mapProp = {
+    <% if(event2.title === "Steamboat"){ %>
+    center:new google.maps.LatLng(40.4850, -106.8317)
+    <% } else if(event2.title === "Keystone") { %>
+    center:new google.maps.LatLng(39.5792, -105.9347)
+    <% } else if (event2.title === "Arapahoe Basin") { %>
+    center:new google.maps.LatLng(39.6423, -105.8717)
+    <% } else if (event2.title === "Decadence") { %>
+    center:new google.maps.LatLng(39.7392, -104.9903) <% } %>,
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
   </head>
   <body>
     <h1>Show Page</h1>
@@ -10,6 +31,7 @@
     <img src="<%=event2.img; %>"><br/>
     Description: <%=event2.description; %><br/>
     Rating: <%=event2.rating; %><br/>
+    <div id="googleMap" style="width:500px;height:380px;"></div>
     <nav>
       <a href="/events2">Back to Events Index</a>
     </nav>
