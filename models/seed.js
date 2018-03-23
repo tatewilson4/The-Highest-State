@@ -94,6 +94,30 @@ let eventSeed = [
     img: "https://www.visitcos.com/images/placeholder.jpg",
     description: "Pikes Peak, located in the Rocky Mountains, is one of the most famous summits in the United States. The 14,115 ft fourteener—a mountain exceeding 14,000 ft above sea level—stands 8,000 ft high over what is known as the Pikes Peak region. This region includes many popular mountain towns at its base such as Colorado Springs, Manitou Springs, Cripple Creek, and Cañon City.",
     rating: 5
+  },
+  {
+    title: "Fall",
+    img: "https://www.colorado.com/sites/default/files/PR_AspenChamber_maroonbellsJeremySwanson.jpg",
+    description: "",
+    rating: ""
+  },
+  {
+    title: "Winter",
+    img: "https://c4.staticflickr.com/8/7188/6873863129_755550bbbe_b.jpg",
+    description: "",
+    rating: ""
+  },
+  {
+    title: "Spring",
+    img: "https://assets.rbl.ms/14650900/980x.jpg",
+    description: "",
+    rating: ""
+  },
+  {
+    title: "Summer",
+    img: "http://www.realestateofthesummit.com/wp-content/uploads/2016/10/Summer-Tourism-e1475768143613.jpeg",
+    description: "",
+    rating: ""
   }
 ]
 

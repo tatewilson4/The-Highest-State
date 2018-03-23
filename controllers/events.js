@@ -13,14 +13,6 @@ router.get('/' , (req, res) => {
   });
 });
 
-router.get('/' , (req, res) => {
-  User.find({}, (err, foundUsers) => {
-    res.render('seasons/index.ejs' , {
-      users: foundUsers
-    });
-  });
-});
-
 router.get('/new' , (req, res) => {
   res.render('seasons/new.ejs')
 });
@@ -31,6 +23,7 @@ router.post('/' , (req, res) => {
     res.redirect('/events');
   });
 });
+
 
 router.get('/:id' , (req,res) => {
   Event.findById(req.params.id, (err, foundEvent) => {

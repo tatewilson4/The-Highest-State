@@ -26,14 +26,24 @@ app.use('/users', usersController);
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
+const events2Controller = require('./controllers/events2.js');
+app.use('/events2', events2Controller);
+
+const events3Controller = require('./controllers/events3.js');
+app.use('/events3', events3Controller);
+
+const events4Controller = require('./controllers/events4.js');
+app.use('/events4', events4Controller);
+
 // app.use(express.static('public'));
 
 
 app.get('/' , (req, res) => {
-  res.render('index.ejs' , {
-    currentUser: req.session.currentUser
-  });
+  res.render('index.ejs');
 });
+
+
+
 
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/events'

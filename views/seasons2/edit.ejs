@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Page</h1>
+    <form action="/events2/<%=event2.id%>?_method=PUT" method="POST">
+      Title: <input type="text" name="title" value="<%=event2.title%>"/><br/>
+      Image: <input type="text" name="img" value="<%=event2.img%>"/><br/>
+      Description: <input type="text" name="description" value="<%=event2.description%>"/><br/>
+      Rating: <input type="number" name="rating" value="<%=event2.rating%>"/><br/>
+      <input type="submit" value="Submit Changes">
+    </form>
+  </body>
+</html>
