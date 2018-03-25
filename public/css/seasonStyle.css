@@ -14,9 +14,23 @@ h1{
 
 img {
   object-fit: cover;
-  height: 25em;
-  width: 25em;
+  height: 20em;
+  width: 62em;
   display: inline-block;
+  text-align: center;
+  margin: 2em;
+}
+
+.list-inline-item {
+  text-align: center;
+  margin: 2em;
+  padding: 2em;
+}
+
+.list-inline {
+  font-weight: bold;
+  font-size: 15px;
+
 }
 
 /* .method {
@@ -25,4 +39,33 @@ img {
 
 li{
   list-style-type: none;
+
+}
+
+.edit {
+  float: left;
+  margin-left: 27.4em;
+  margin-top: .099em;
+
+}
+
+.delete {
+  float: right;
+  background-color: none;
+  color: blue;
+  border: none;
+  margin-right: 26.6em;
+  font-weight: bold;
+}
+
+.title {
+  background: black;
+  padding: .7em;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+body {
+  font-family: Optima, sans-serif;
+
 }

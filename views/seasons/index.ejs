@@ -15,12 +15,12 @@
     <ul class="list-inline">
       <% for(let i = 0; i < events.length; i++) { %>
         <li class="list-inline-item">
-          <a href="/events/<%=events[i].id; %>"><%=events[i].title; %></a><br/>
-          <img src="<%=events[i].img; %>"><br/>
+          <a class ="title" href="/events/<%=events[i].id; %>"><%=events[i].title; %></a><br/>
+          <img class="img" src="<%=events[i].img; %>"><br/>
           <form action="/events/<%=events[i].id; %>?_method=DELETE" method="POST">
-          <input class="method" type="submit" name="" value="Delete this Event"/>
+          <input class="delete" type="submit" name="" value="Delete this Event"/>
           </form>
-          <a class="method" href="/events/<%=events[i].id; %>/edit">Edit</a><br/>
+          <a class="edit" href="/events/<%=events[i].id; %>/edit">Edit</a><br/>
         </li>
       <% } %>
     </ul>
