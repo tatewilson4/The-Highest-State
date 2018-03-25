@@ -1,0 +1,14 @@
+h1 {
+  color: darkGrey;
+}
+
+.header{
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.user {
+  float: right;
+  margin-left: 1em;
+  color: #3500D3
+}

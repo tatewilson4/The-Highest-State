@@ -3,15 +3,12 @@
   text-align: center;
   color: darkGrey;
 }
-
 h1{
-  color: darkGrey;
+  color: darkGrey
 }
-
 .header{
   background-color: black;
 }
-
 .user {
   float: right;
   margin-left: 1em;
@@ -23,40 +20,32 @@ body {
   background-image: url(https://steamuserimages-a.akamaihd.net/ugc/91602025471708710/CABA9CFE00AF0EFFFF037A861E17D882E93AFD4C/);
 }
 
+
 .seasonImage{
-  position: relative;
   height: 6em;
   width: 6em;
   object-fit: cover;
-  margin-top: 0;
-  margin-left: 0;
 }
 
 .seasonImage2{
-  position: absolute;
-  height: 10em;
-  width: 10em;
+  height: 6em;
+  width: 6em;
   object-fit: cover;
-  margin-top: 0;
-  margin-left: 0;
+
 }
 
 .seasonImage3{
-  position: relative;
   height: 6em;
   width: 6em;
   object-fit: cover;
-  margin-top: 0;
-  margin-left: 0;
+
 }
 
 .seasonImage4{
-  position: absolute;
   height: 6em;
   width: 6em;
   object-fit: cover;
-  margin-top: 0;
-  margin-left: 0;
+
 }
 
 .backgroundImage {

@@ -3,13 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/LoginStyle.css">
   </head>
   <body>
-    <h1>Log In</h1>
-    <form action="/sessions" method="POST">
-      <input type="text" name="name" placeholder="name">
-      <input type="password" name="password">
-      <input type="submit" value="Log In">
-    </form>
+    <div class="container">
+      <div class="header">
+        <h1>The Highest State</h1>
+        <a class="user" href="/users/new">Create New User</a> CO
+        <a class="user" href="/sessions/new">Log In</a><br/>
+      </div>
+      <h1>Log In</h1>
+      <form action="/sessions" method="POST">
+        <input type="text" name="name" placeholder="name">
+        <input type="password" name="password">
+        <input type="submit" value="Log In">
+      </form>
+    </div>
   </body>
 </html>

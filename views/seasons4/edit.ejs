@@ -3,15 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/loginStyle.css">
   </head>
   <body>
-    <h1>Edit Page</h1>
-    <form action="/events4/<%=event4.id%>?_method=PUT" method="POST">
-      Title: <input type="text" name="title" value="<%=event4.title%>"/><br/>
-      Image: <input type="text" name="img" value="<%=event4.img%>"/><br/>
-      Description: <input type="text" name="description" value="<%=event4.description%>"/><br/>
-      Rating: <input type="number" name="rating" value="<%=event4.rating%>"/><br/>
-      <input type="submit" value="Submit Changes">
-    </form>
+    <div class="container">
+      <div class="header">
+        <h1>The Highest State</h1>
+        <a class="user" href="/users/new">Create New User</a> CO
+        <a class="user" href="/sessions/new">Log In</a><br/>
+      </div>
+      <form action="/events4/<%=event4.id%>?_method=PUT" method="POST">
+        Title: <input type="text" name="title" value="<%=event4.title%>"/><br/>
+        Image: <input type="text" name="img" value="<%=event4.img%>"/><br/>
+        Description: <input type="text" name="description" value="<%=event4.description%>"/><br/>
+        Rating: <input type="number" name="rating" value="<%=event4.rating%>"/><br/>
+        <input type="submit" value="Submit Changes">
+      </form>
   </body>
 </html>

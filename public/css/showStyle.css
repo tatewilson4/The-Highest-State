@@ -1,0 +1,32 @@
+h1 {
+  color: darkGrey;
+}
+
+.header{
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.user {
+  float: right;
+  margin-left: 1em;
+  color: #3500D3
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+body {
+  font-family: Optima, sans-serif;
+}
+
+img {
+  object-fit: cover;
+  height: 20%;
+  width: 100%;
+}
