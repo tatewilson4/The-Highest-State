@@ -6,6 +6,20 @@
 h1{
   color: darkGrey
 }
+/*
+h2 {
+  color: lightGrey;
+  text-align: center;
+  background: #190061;
+  height: 2%;
+  width: 50%;
+  padding: .33em;
+  margin-left: 9em;
+  border-radius: 10px;
+  opacity: .5;
+  margin-top: .25em;
+} */
+
 .header{
   background-color: black;
 }
@@ -18,39 +32,35 @@ h1{
 body {
   background-color: rgba(0, 0, 0, 1);
   background-image: url(https://steamuserimages-a.akamaihd.net/ugc/91602025471708710/CABA9CFE00AF0EFFFF037A861E17D882E93AFD4C/);
+  font-family: Optima, sans-serif;
 }
 
-
-.seasonImage{
-  height: 6em;
-  width: 6em;
+.seasonImage, .seasonImage3{
+  text-align: center;
+  height: 20em;
+  width: 20em;
   object-fit: cover;
+  margin: 1em;
 }
 
-.seasonImage2{
-  height: 6em;
-  width: 6em;
+.seasonImage2, .seasonImage4{
+  text-align: center;
+  height: 20em;
+  width: 20em;
   object-fit: cover;
-
+  margin: 1em;
 }
 
-.seasonImage3{
-  height: 6em;
-  width: 6em;
-  object-fit: cover;
-
-}
-
-.seasonImage4{
-  height: 6em;
-  width: 6em;
-  object-fit: cover;
-
-}
 
 .backgroundImage {
   height: 66em;
   width: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
