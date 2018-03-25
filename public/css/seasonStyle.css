@@ -1,0 +1,28 @@
+h1{
+  color: darkGrey;
+}
+
+.header{
+  background-color: black;
+}
+
+.user {
+  float: right;
+  margin-left: 1em;
+  color: #3500D3
+}
+
+img {
+  object-fit: cover;
+  height: 25em;
+  width: 25em;
+  display: inline-block;
+}
+
+/* .method {
+  float: right;
+} */
+
+li{
+  list-style-type: none;
+}

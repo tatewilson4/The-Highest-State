@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>The Highest State</h1>
+    <a href="/users/new">Create New User</a> ||
+    <a href="/sessions/new">Log In</a>
+    <ul>
+      <% for(let i = 0; i < events5.length; i++) { %>
+        <li>
+          <a href="/events5/<%=events5[i].id; %>"><%=events5[i].title; %></a><br/>
+          <img src="<%=events5[i].img; %>"><br/>
+          Description: <%=events5[i].description; %><br/>
+          Rating: <%=events5[i].rating; %><br/>
+          <form action="/events5/<%=events5[i].id; %>?_method=DELETE" method="POST">
+          <input type="submit" name="" value="Delete this Event"/>
+          </form>
+          <a href="/events5/<%=events5[i].id; %>/edit">Edit</a>
+        </li>
+      <% } %>
+    </ul>
+    <nav>
+      <a href="/events5/new">Create New Event</a>
+    </nav>
+  </body>
+</html>

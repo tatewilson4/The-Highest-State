@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/seasonStyle.css">
   </head>
   <body>
-    <h1>The Highest State</h1>
-    <a href="/users/new">Create New User</a> ||
-    <a href="/sessions/new">Log In</a>
-    <ul>
+    <div class="header">
+      <h1>The Highest State</h1>
+      <a class="user" href="/users/new">Create New User</a> CO
+      <a class="user" href="/sessions/new">Log In</a><br/>
+    </div>
+    <ul class="list-inline">
       <% for(let i = 0; i < events.length; i++) { %>
-        <li>
+        <li class="list-inline-item">
           <a href="/events/<%=events[i].id; %>"><%=events[i].title; %></a><br/>
           <img src="<%=events[i].img; %>"><br/>
-          Description: <%=events[i].description; %><br/>
-          Rating: <%=events[i].rating; %><br/>
           <form action="/events/<%=events[i].id; %>?_method=DELETE" method="POST">
-          <input type="submit" name="" value="Delete this Event"/>
+          <input class="method" type="submit" name="" value="Delete this Event"/>
           </form>
-          <a href="/events/<%=events[i].id; %>/edit">Edit</a>
+          <a class="method" href="/events/<%=events[i].id; %>/edit">Edit</a><br/>
         </li>
       <% } %>
     </ul>

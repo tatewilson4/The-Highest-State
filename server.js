@@ -35,7 +35,10 @@ app.use('/events3', events3Controller);
 const events4Controller = require('./controllers/events4.js');
 app.use('/events4', events4Controller);
 
-// app.use(express.static('public'));
+const events5Controller = require('./controllers/events5.js');
+app.use('/events5', events5Controller);
+
+app.use(express.static('public'));
 
 
 
